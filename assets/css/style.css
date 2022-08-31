@@ -1,3 +1,33 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+.header-image {
+    background-image: url("lightning.jpg");
+}
+.header-text {
+    text-align: center;
+    position: relative;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-image: url("lightning.jpg")
+}
+/* h2 {
+    display: flex;
+    flex-basis: auto;
+    align-items: stretch;
+    background-image: url("lightning.jpg");
+    background-color: navy;
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}

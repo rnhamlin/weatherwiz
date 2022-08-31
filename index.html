@@ -20,11 +20,35 @@
 
 
 <body>
-    <h2>
-        Weather Wizard
-    </h2>
+    <div class="header-image">
+        <h2 class="header-text">
+            Weather Wizard
+        </h2>
+    </div>
+    <main class="flex-row justify-space-between">
+<!--search bar function-->
+        <div class="col-12 col-md-4">
+            <div class="card">
+                <h3 class="card-header text-uppercase">Search by City</h3>
+                <form id="searchbar" class="card-body"> 
+                    <label class="form-label" for="City Name">City Name</label>
+                    <input name="city" id="city" type="text" autofocus="true" class="form-input" />
+                    <button type="submit" class="btn">Get Weather!</button>
+                </form>
+            </div>
+        </div>
+          
+<!--Where the API data should appear--maybe this needs to go in the script file?-->
+        <div class="col-12 col-md-8">
+            <div id="temp">
 
-    <script src="/assets/javascript/script.js"></script>
+            </div>
+
+        </div>
+          </main>
+    </main>
+
+    <script src="./assets/javascript/script.js"></script>
 </body>
 
 
