@@ -1,33 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 .header-image {
-    background-image: url("lightning.jpg");
+  height: 70px;
+  background-color: navy;
+  background-image: url("../images/lightning.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: 80% 50%;
 }
 .header-text {
-    text-align: center;
-    position: relative;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    background-image: url("lightning.jpg")
+  color: white;
+  text-shadow: 2px 2px 2px #000000;
+  font-size: 40px;
 }
-/* h2 {
-    display: flex;
-    flex-basis: auto;
-    align-items: stretch;
-    background-image: url("lightning.jpg");
-    background-color: navy;
-    height: 100px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
 
+main {
+  flex-grow: 1;
+}
+
+.flex-parent{
+    border: 1px solid red;
+    display: flex;
+}
+
+.left-side {
+  /* max-width: 250px; */
+  background-color: yellow;
+}
+.right-side {
+  flex-grow: 1;
+  background-color: pink;
+}
 
 form {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
