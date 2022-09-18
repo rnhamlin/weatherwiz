@@ -29,19 +29,24 @@ main {
   flex-grow: 1;
 }
 
-.flex-parent{
-    border: 1px solid red;
-    display: flex;
+.flex-parent {
+  border: 1px solid red;
+  display: flex;
+  background-color: pink;
 }
 
-.left-side {
-  /* max-width: 250px; */
-  background-color: yellow;
+.card {
+  background-color: black;
 }
+
+/* .left-side { 
+  max-width: 250px;
+  background-color: yellow;
+} 
 .right-side {
   flex-grow: 1;
   background-color: pink;
-}
+} */
 
 form {
   display: flex;
