@@ -5,7 +5,6 @@ var cityInput = document.getElementById("city");
 function getCoordinates(e) {
   e.preventDefault();
   var city = cityInput.value;
-  console.log(city);
 
   if (!city || city === "") return;
 
@@ -21,11 +20,11 @@ function getCoordinates(e) {
     .then((data) => {
       console.log(`coordinates: `, data);
       getWeather(data.coord.lat, data.coord.lon);
+      getForecast(data.coord.lat, data.coord.lon);
     });
 }
 
 function getWeather(lat, lon) {
-  console.log("get weather function");
   var queryURL2 = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${weatherAPIkey}`;
 
   fetch(queryURL2)
@@ -34,10 +33,41 @@ function getWeather(lat, lon) {
     })
     .then((data) => {
       console.log("weather data, ", data);
-      displayWeather(data);
+      displayCurrentWeather(data);
     });
 }
-function displayWeather(data) {
-  document.getElementById("temp").textContent = data.main.temp;
+
+function getForecast(lat, lon) {
+  var queryURL2 = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${weatherAPIkey}`;
+
+  fetch(queryURL2)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log("forecast data, ", data);
+      displayForecast(data);
+    });
+}
+//
+
+function displayCurrentWeather(data) {
+  document.getElementById(
+    "temp"
+  ).textContent = `Temperature: ${data.main.temp}℉`;
+  document.getElementById(
+    "humidity"
+  ).textContent = `Humidity: ${data.main.humidity}%`;
+  document.getElementById("conditions").textContent = data.weather[0].main;
+  document.getElementById(
+    "icon"
+  ).src = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+  document.getElementById("city-name").textContent = `${data.name} Today`;
+  document.getElementById("wind-speed").textContent = `${data.wind.speed} MPH`;
+}
+
+function displayForecast(data) {
+  //make forecast cards
+  document.getElementById("");
 }
 searchButton.addEventListener("click", getCoordinates);

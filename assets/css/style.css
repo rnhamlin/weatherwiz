@@ -32,11 +32,22 @@ main {
 .flex-parent {
   border: 1px solid red;
   display: flex;
-  background-color: pink;
 }
 
 .card {
   background-color: black;
+}
+#forecast-cards {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.forecast-cards {
+  border: 3px solid black;
+  display: flex;
+  align-items: center;
 }
 
 /* .left-side { 
