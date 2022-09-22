@@ -30,24 +30,44 @@ main {
 }
 
 .flex-parent {
-  border: 1px solid red;
   display: flex;
 }
 
 .card {
   background-color: black;
 }
-#forecast-cards {
+#forecast-section {
   display: flex;
   flex-grow: 1;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
 }
 
 .forecast-cards {
   border: 3px solid black;
   display: flex;
   align-items: center;
+  flex-direction: column;
+}
+
+#forecast-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.search-history {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-right: 77px;
+  padding-left: 77px;
+  justify-content: space-around;
+}
+
+.search-results {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* .left-side { 

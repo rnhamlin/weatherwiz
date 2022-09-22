@@ -45,10 +45,7 @@
             </form>
           </div>
         </div>
-        <div
-          class="search-results"
-          style="border: 2px solid blue; flex-grow: 1"
-        >
+        <div class="search-results" style="flex-grow: 1">
           <h3 id="city-name"></h3>
           <img id="icon" src="" />
           <p id="conditions"></p>
@@ -60,17 +57,18 @@
       <!--search history and 5-day forecast go under the search bar and results row-->
       <div class="flex-parent">
         <!--Search history-->
-        <div class="search-history" style="border: 3px solid greenyellow">
-          <h4 class="">Search History</h4>
+        <div class="search-history">
+          <h4>Search History</h4>
         </div>
-        <div id="forecast-cards">
+        <div id="forecast-section" style="border: 3px solid blue">
           <!--5 Day Forecast needs cards to appear below-->
-          <h3 id="forecast-heading"></h3>
-          <div class="forecast-cards"></div>
-          <div class="forecast-cards"></div>
-          <div class="forecast-cards"></div>
-          <div class="forecast-cards"></div>
-          <div class="forecast-cards"></div>
+          <div>
+            <h4 id="forecast-heading"></h4>
+          </div>
+          <div
+            id="forecast-cards"
+            style="border: 3px solid orange; flex-grow: 1"
+          ></div>
         </div>
       </div>
     </main>
