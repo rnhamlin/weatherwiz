@@ -53,7 +53,8 @@ main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding: 20px;
 }
 
 .search-history {
@@ -68,16 +69,9 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
+  font-weight: bold;
 }
-
-/* .left-side { 
-  max-width: 250px;
-  background-color: yellow;
-} 
-.right-side {
-  flex-grow: 1;
-  background-color: pink;
-} */
 
 form {
   display: flex;

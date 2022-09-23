@@ -39,7 +39,11 @@
                 autofocus="true"
                 class="form-input"
               />
-              <button type="submit" class="btn btn-outline-info">
+              <button
+                type="submit"
+                class="btn btn-outline-info"
+                id="get-weather-button"
+              >
                 Get Weather!
               </button>
             </form>
@@ -60,15 +64,12 @@
         <div class="search-history">
           <h4>Search History</h4>
         </div>
-        <div id="forecast-section" style="border: 3px solid blue">
+        <div id="forecast-section">
           <!--5 Day Forecast needs cards to appear below-->
           <div>
             <h4 id="forecast-heading"></h4>
           </div>
-          <div
-            id="forecast-cards"
-            style="border: 3px solid orange; flex-grow: 1"
-          ></div>
+          <div id="forecast-cards"></div>
         </div>
       </div>
     </main>

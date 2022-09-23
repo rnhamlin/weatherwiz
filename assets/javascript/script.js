@@ -46,6 +46,21 @@ function addToLocal(newCity) {
   loadButtons();
 }
 
+/* historyEl = [""];
+var uniqueNames = [];
+$.each(names, historyEl(i, el));
+if ($.inArray(el, uniqueNames) === -1) uniqueNames.push(el);
+
+.then((response) => {
+  return response.json();
+})
+.then((data) => {
+  var filtered = data.list.filter((index) =>
+    index.dt_txt.includes("12:00:00")
+  );
+  displayForecast(filtered);
+}); */
+
 function getWeather(lat, lon) {
   var queryURL2 = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${weatherAPIkey}`;
 
@@ -86,7 +101,9 @@ function displayCurrentWeather(data) {
     "icon"
   ).src = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
   document.getElementById("city-name").textContent = `${data.name} Today`;
-  document.getElementById("wind-speed").textContent = `${data.wind.speed} MPH`;
+  document.getElementById(
+    "wind-speed"
+  ).textContent = `Wind Speed: ${data.wind.speed} MPH`;
 }
 
 function displayForecast(data) {
@@ -135,6 +152,7 @@ function displayForecast(data) {
     //Call the function--appending the child tells it to display it in the card.
 
     card.appendChild(timestamp);
+    //card.appendChild(icon);
     card.appendChild(newC);
     card.appendChild(newP);
     card.appendChild(newH);
